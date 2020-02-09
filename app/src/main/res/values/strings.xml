@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">SportScorer</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <string name="navigation_bottom_singlematch">Match</string>
+    <string name="navigation_bottom_quickmatch">Qucik Scorer</string>
+    <string name="navigation_bottom_match">Cup / League</string>
+
+    <string name="retry">Retry</string>
+    <string name="post_error">An error occurred while loading the posts</string>
 </resources>
