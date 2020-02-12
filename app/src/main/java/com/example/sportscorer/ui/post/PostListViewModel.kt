@@ -21,6 +21,8 @@ class PostListViewModel(private val postDao: PostDao): BaseViewModel(){
 
     val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
     val errorMessage:MutableLiveData<Int> = MutableLiveData()
+    val eventClick:MutableLiveData<Int> = MutableLiveData()
+
     val errorClickListener = View.OnClickListener { loadPosts() }
 
     val postListAdapter: PostListAdapter = PostListAdapter()
@@ -28,6 +30,10 @@ class PostListViewModel(private val postDao: PostDao): BaseViewModel(){
 
     init{
         loadPosts()
+    }
+
+    fun nextActivity(event:Int){
+        eventClick.value = event
     }
 
     private fun loadPosts(){

@@ -9,7 +9,15 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_nextActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:onClick="@{() -> viewModel.nextActivity(0)}"
+            android:text="@string/next_activity"
+            />
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:adapter="@{viewModel.getPostListAdapter()}"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nextActivity"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

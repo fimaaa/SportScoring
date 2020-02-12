@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.notifications
+package com.example.sportscorer.ui.tournament
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,21 +10,21 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.sportscorer.R
 
-class NotificationsFragment : Fragment() {
+class TournamentFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var tournamentViewModel: TournamentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
+        tournamentViewModel =
 //            ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        ViewModelProvider(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+        ViewModelProvider(this).get(TournamentViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_match_tournament, container, false)
         val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(this, Observer {
+        tournamentViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root
