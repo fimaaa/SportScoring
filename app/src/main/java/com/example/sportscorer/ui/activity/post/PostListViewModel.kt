@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.post
+package com.example.sportscorer.ui.activity.post
 
 import android.view.View
 import androidx.lifecycle.MutableLiveData
@@ -7,6 +7,7 @@ import com.example.sportscorer.base.BaseViewModel
 import com.example.sportscorer.model.Post
 import com.example.sportscorer.model.PostDao
 import com.example.sportscorer.network.PostApi
+import com.example.sportscorer.ui.adapter.post.PostListAdapter
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -25,7 +26,8 @@ class PostListViewModel(private val postDao: PostDao): BaseViewModel(){
 
     val errorClickListener = View.OnClickListener { loadPosts() }
 
-    val postListAdapter: PostListAdapter = PostListAdapter()
+    val postListAdapter: PostListAdapter =
+        PostListAdapter()
 
 
     init{

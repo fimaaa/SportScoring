@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.singlematch
+package com.example.sportscorer.ui.fragment.singlematch
 
 import android.os.Bundle
 import android.view.LayoutInflater

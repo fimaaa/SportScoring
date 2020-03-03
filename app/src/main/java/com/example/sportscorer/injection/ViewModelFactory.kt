@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import com.example.sportscorer.model.database.AppDatabase
-import com.example.sportscorer.ui.post.PostListViewModel
+import com.example.sportscorer.ui.activity.post.PostListViewModel
 
 class ViewModelFactory(private val activity: AppCompatActivity): ViewModelProvider.Factory{
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

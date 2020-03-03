@@ -1,4 +1,4 @@
-package com.example.sportscorer
+package com.example.sportscorer.ui.activity.main
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.sportscorer.R
 
 class MainActivity : AppCompatActivity() {
     companion object{
@@ -27,7 +28,9 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_singlematch, R.id.navigation_qucikscorer, R.id.navigation_match
+                R.id.navigation_singlematch,
+                R.id.navigation_qucikscorer,
+                R.id.navigation_match
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

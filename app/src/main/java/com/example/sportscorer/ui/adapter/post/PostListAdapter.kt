@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.post
+package com.example.sportscorer.ui.adapter.post
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,7 +13,9 @@ class PostListAdapter: RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemPostBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_post, parent, false)
-        return ViewHolder(binding)
+        return ViewHolder(
+            binding
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -30,7 +32,8 @@ class PostListAdapter: RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
     }
 
     class ViewHolder(private val binding: ItemPostBinding):RecyclerView.ViewHolder(binding.root){
-        private val viewModel = PostViewModel()
+        private val viewModel =
+            PostViewModel()
 
         fun bind(post:Post){
             viewModel.bind(post)

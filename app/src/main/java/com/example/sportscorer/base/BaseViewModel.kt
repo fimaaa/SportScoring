@@ -4,8 +4,7 @@ import androidx.lifecycle.ViewModel
 import com.example.sportscorer.injection.component.DaggerViewModelInjector
 import com.example.sportscorer.injection.component.ViewModelInjector
 import com.example.sportscorer.injection.module.NetworkModule
-import com.example.sportscorer.ui.post.PostListViewModel
-import com.example.sportscorer.ui.post.PostViewModel
+import com.example.sportscorer.ui.activity.post.PostListViewModel
 
 abstract class BaseViewModel: ViewModel() {
     private val injector: ViewModelInjector = DaggerViewModelInjector

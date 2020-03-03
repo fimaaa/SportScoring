@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.post
+package com.example.sportscorer.ui.adapter.post
 
 import androidx.lifecycle.MutableLiveData
 import com.example.sportscorer.base.BaseViewModel

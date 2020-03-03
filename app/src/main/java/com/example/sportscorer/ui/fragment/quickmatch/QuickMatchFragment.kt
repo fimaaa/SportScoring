@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.quickmatch
+package com.example.sportscorer.ui.fragment.quickmatch
 
 import android.os.Bundle
 import android.view.LayoutInflater

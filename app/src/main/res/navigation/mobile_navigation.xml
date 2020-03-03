@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_singlematch"
-        android:name="com.example.sportscorer.ui.singlematch.SingleMatchFragment"
+        android:name="com.example.sportscorer.ui.fragment.singlematch.SingleMatchFragment"
         android:label="@string/navigation_bottom_singlematch"
         tools:layout="@layout/fragment_match_single" />
 
     <fragment
         android:id="@+id/navigation_qucikscorer"
-        android:name="com.example.sportscorer.ui.quickmatch.QuickMatchFragment"
+        android:name="com.example.sportscorer.ui.fragment.quickmatch.QuickMatchFragment"
         android:label="@string/navigation_bottom_quickmatch"
         tools:layout="@layout/fragment_match_quick" />
 
     <fragment
         android:id="@+id/navigation_match"
-        android:name="com.example.sportscorer.ui.tournament.TournamentFragment"
+        android:name="com.example.sportscorer.ui.fragment.tournament.TournamentFragment"
         android:label="@string/navigation_bottom_tournament"
         tools:layout="@layout/fragment_match_tournament" />
 </navigation>

@@ -1,7 +1,7 @@
 package com.example.sportscorer.injection.component
 
 import com.example.sportscorer.injection.module.NetworkModule
-import com.example.sportscorer.ui.post.PostListViewModel
+import com.example.sportscorer.ui.activity.post.PostListViewModel
 import dagger.Component
 import javax.inject.Singleton
 

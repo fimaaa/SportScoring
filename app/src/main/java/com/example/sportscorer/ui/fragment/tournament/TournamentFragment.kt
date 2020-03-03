@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.tournament
+package com.example.sportscorer.ui.fragment.tournament
 
 import android.os.Bundle
 import android.view.LayoutInflater

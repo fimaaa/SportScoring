@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.sportscorer.ui.post.PostViewModel" />
+            type="com.example.sportscorer.ui.adapter.post.PostViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

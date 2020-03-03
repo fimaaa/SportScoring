@@ -1,13 +1,13 @@
-package com.example.sportscorer.ui.singlematch
+package com.example.sportscorer.ui.fragment.tournament
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SingleMatchViewModel : ViewModel() {
+class TournamentViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is notifications Fragment"
     }
     val text: LiveData<String> = _text
 }

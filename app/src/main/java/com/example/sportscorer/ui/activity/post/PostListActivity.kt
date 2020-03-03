@@ -1,4 +1,4 @@
-package com.example.sportscorer.ui.post
+package com.example.sportscorer.ui.activity.post
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,10 +6,9 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.sportscorer.MainActivity
+import com.example.sportscorer.ui.activity.main.MainActivity
 import com.example.sportscorer.R
 import com.example.sportscorer.databinding.ActivityPostListBinding
 import com.example.sportscorer.injection.ViewModelFactory
@@ -55,7 +54,7 @@ class PostListActivity: AppCompatActivity() {
 
     private fun eventHandle(event:Int){
         when(event){
-            EVENT_STARTACTIVIY_MAIN->{
+            EVENT_STARTACTIVIY_MAIN ->{
                 startActivity(MainActivity.startActivity(this))
             }
             else->{
