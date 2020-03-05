@@ -7,6 +7,8 @@ import com.example.sportscorer.R
 
 class QuickMatchViewModel : ViewModel() {
 
+    val statusMenu = MutableLiveData<Boolean>()
+
     val scoreHomeHundred = MutableLiveData<String>().apply {
         value = "0"
     }
@@ -32,6 +34,57 @@ class QuickMatchViewModel : ViewModel() {
 
     val roundAway = MutableLiveData<String>().apply {
         value = "0"
+    }
+
+    fun openMenu(){
+        statusMenu.value = false
+    }
+
+    fun resetMatch(){
+        resetScore()
+        resetRound()
+    }
+
+    private fun resetRound(){
+        roundHome.value = "0"
+        roundAway.value = "0"
+    }
+    fun resetScore(){
+        scoreHomeHundred.value = "0"
+        scoreHomeDozen.value = "0"
+        scoreHomeUnit.value = "0"
+        scoreAwayHundred.value = "0"
+        scoreAwayDozen.value = "0"
+        scoreAwayUnit.value = "0"
+    }
+
+    fun changeRound(view:View){
+        var isAdd = true
+        var round :MutableLiveData<String>? = null
+        when(view.id){
+            R.id.view_bottom_round_away ->{
+                isAdd = false
+                round = roundAway
+            }
+            R.id.view_up_round_away ->{
+                isAdd = true
+                round = roundAway
+            }
+            R.id.view_bottom_round_home ->{
+                isAdd = false
+                round = roundHome
+            }
+            R.id.view_up_round_home->{
+                isAdd = true
+                round = roundHome
+            }
+        }
+
+        if(!isAdd && round?.value != "0"){
+            round?.value = (Integer.parseInt(round?.value?:"0")-1).toString()
+        }else if(isAdd){
+            round?.value = (Integer.parseInt(round?.value?:"0")+1).toString()
+        }
     }
 
     fun changeScore(view:View){
@@ -129,5 +182,4 @@ class QuickMatchViewModel : ViewModel() {
             }
         }
     }
-
 }

@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.sportscorer.R
 import com.example.sportscorer.databinding.FragmentMatchQuickBinding
+import com.example.sportscorer.ui.dialog.menu.MenuDialog
 
 
 class QuickMatchFragment : Fragment() {
@@ -30,7 +33,7 @@ class QuickMatchFragment : Fragment() {
 //        })
 //        return root
 //    }
-
+    private lateinit var dialog: MenuDialog
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,6 +46,19 @@ class QuickMatchFragment : Fragment() {
 //            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
         ViewModelProvider(this).get(QuickMatchViewModel::class.java)
         binding.viewModel = quickMatchViewModel
+        dialog = MenuDialog().newInstance(quickMatchViewModel)
+        quickMatchViewModel.statusMenu.observe(viewLifecycleOwner, Observer {
+            openDialog()
+        })
+
         return binding.root
+    }
+
+
+    private fun openDialog(){
+        dialog.show(
+            requireFragmentManager(),
+            "TAG"
+        )
     }
 }

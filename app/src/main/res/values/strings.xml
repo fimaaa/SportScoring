@@ -9,4 +9,10 @@
     <string name="post_error">An error occurred while loading the posts</string>
     <string name="next_activity">Next Activity</string>
     <string name="integer"> %1$s </string>
+    <string name="reset_match">Reset Match</string>
+    <string name="previous">Previous</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="next">Next</string>
+    <string name="reset_score">Reset Score</string>
 </resources>
